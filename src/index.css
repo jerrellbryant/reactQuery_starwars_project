@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'STJEDISE';
+  src: url('fonts/STJEDISE.TTF') format('truetype');
+}
+:root {
+  --primary: #ffff57;
+  --white: #fff;
+}
+.App {
+  /*width: 960px;*/
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr)
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #000;
+  background-image: url(img/stars.jpg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: top top;
+  background-blend-mode: lighten;
+  color: #ddd;
+}
+
+h1, h2, h3 {
+  font-family: 'STJEDISE';
+  letter-spacing: .2em;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  grid-column: 2/ -1;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1em;
+}
+nav {
+  grid-column: 4/ span 3;
+}
+.content {
+  grid-column: 2/7;
+
+}
+button {
+  margin: 5px;
+  background-color: transparent;
+  /* border: 3px solid #ccc; */
+  /* border-radius: 20px; */
+  border: none;
+  padding: 5px;
+  color: #ccc;
+  font-size: 1.1em;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  color: var(--white);
+  border-color: var(--white)
+}
+
+button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+nav .planets {
+  margin-left: 0;
+  padding: 0
+}
+
+.card {
+  padding: 2px 16px;
+  background-color: #1b1b1b1b;
+  margin: 0;
+}
+
+.card p {
+  margin: 6px 0;
+  color: #999;
+  font-size: 1em;
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: var(--primary);
+}
+.pagination {
+  margin-bottom: 1em;
+}
+
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+
+  h1 {
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    grid-column: 2/ -1;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  nav {
+    grid-column: 4/ span 3;
+  }
+  .content {
+    grid-column: 2/7;
+  }
+
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+
+  .App {
+    width: 960px;
+  }
+  h1 {
+    grid-column: 2 / -1;
+    font-size: 4em;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  button {
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+
+  nav {
+    grid-column: 4 / span 2;
+  }
+
+
+  .content {
+    grid-column: 2/6;
+
+  }
+
+  .card {
+    padding: 8px 16px;
+    margin: 16px 0;
+    border-radius: 20px;
+  }
+
+  .card p {
+    margin: 6px 0;
+    font-size: 18px;
+  }
+
+  .card h3 {
+    margin: 10px 0;
+  }
+
+}
